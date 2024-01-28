@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    
+
+ 
+ <div id="mySidenav" class="sidenav ">
+
+    <div class="links">
+
+    <a href="#" onclick="goToSearch()"  class="animate__bounce">Search</a>
+    <a href="#" onclick="goToCategories()">Categories</a>
+    <a href="#" onclick="goToArea()">Area</a>
+    <a href="#" onclick="goToIngredients()">Ingredients</a>
+    <a href="#" onclick="goToContact()">Contact</a>
+
+    
+    </div>
+    
+    <div class="navIcons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-solid fa-globe"></i>
+        <p>Copyright Â© 2019 All Rights Reserved.</p>
+
+    </div>
+
+    
+  </div>
+  
+  
+  <div class="open" id="open">
+
+    <img class="d-block " src="./css/images/istockphoto-1386973628-612x612.jpg" alt="" width="70px" height="70px">
+    <span id="opening" onclick="openNav()"> <i class="fa-solid open-close-icon fa-2x fa-align-justify"></i></span>
+    <span id="closing" class="d-none" onclick="closeNav()"> <i class="fa-solid open-close-icon fa-2x fa-x"></i></span>
+
+
+    <div class="icons">
+        <i class="fa-solid fa-globe d-block mb-2"></i>
+        <i class="fa-solid fa-share-nodes"></i>
+    </div>
+  </div>
+
+  <!---------------------------- Home Page ----------------------------------->
+
+
+  <div class="container "  id="home">
+
+    <div class="row py-5 g-4 " id="rowData">
+        
+    </div>
+
+
+  </div>
+
+  <!------------------------- Details Page-------------------------------------->
+
+  <div class="container d-none  " id="details">
+
+    <div class="row py-5 g-4 " id="detailsData">
+        
+
+    </div>
+    </div>
+    
+
+
+    <!--------------------------- Search Page ------------------------------------>
+
+  <div class="search d-none" id="search">
+
+    <div class="d-flex flex-row w-50 p-4 mx-auto">
+
+        <input type="text" class="form-control "  onkeyup="searchByName(this.value)" id="searchNameValue" placeholder="Search by name" style="margin-right: 10px;">
+        <input type="text" class="form-control "  onkeyup="searchByLetter(this.value)" maxlength="1" id="searchLetterValue" placeholder="Search by first letter">
+
+    </div>
+    
+  </div>
+
+  <div class="container w-100" id="searchContainer">
+
+    <div class="container">
+        <div class="row py-5 g-4 " id="searchData">
+            
+        </div>
+    </div>
+</div>
+  </div>
+
+  <!---------------------------- Categories Page ---------------------------------->
+
+  <div class="categories d-none" id="categories">
+
+    <div class="container">
+
+       <div class="row py-5 g-4 " id="categoriesData">
+            
+    </div>
+  </div>
+  </div>
+
+
+
+
+  <!---------------------------- Area Page ----------------------------------->
+
+
+  <div class="area d-none " id="area">
+
+
+    <div class="container ">
+
+        <div class="row py-5 g-4 " id="areaData">
+
+            <div class="col-md-3 ">
+           
+                <div class="d-flex flex-column text-center">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i> 
+                          
+                            
+                        
+    
+               </div>
+          </div>
+
+          
+            
+        </div>
+    
+    
+    </div>
+  
+  </div>
+
+
+
+  <!--------------------------- Ingredients Page------------------------------------>
+
+
+  <div class="Ingredients d-none " id="ingredients">
+
+
+    <div class="container">
+
+        <div class="row py-5 g-4 " id="ingredientsData">
+
+            <div class="col-md-3 ">
+           
+                <div class="d-flex flex-column text-center">
+                    <i class="fa-solid fa-house-laptop fa-4x"></i> 
+                    <h3>chicken</h3>
+                    <p > bla bla bla</p>
+                            
+                        
+    
+               </div>
+          </div>
+
+          
+            
+        </div>
+    
+    
+    </div>
+  
+  </div>
+
+
+  <!----------------------  Contact Page ----------------------------------------->
+
+
+  <div class="contactus d-none" id="contact">
+
+    <div class="container ">
+
+        <div class="row py-5 g-4  ">
+
+            <div class="row g-4 " id="contact">
+
+                <div class="col-md-6" >
+                    <form action="" id="registerName">
+                        <input type="text" class="form-control"  id="name" placeholder="Enter Your Name"  style="margin-right: 10px;">
+                        <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Special characters and numbers not allowed
+                        </div>
+
+                    </form>
+                        
+                    
+                 </div>   
+                 
+                <div class="col-md-6" >
+                    <form action="" id="registerEmail">
+
+
+                    <input type="text" class="form-control "    id="email" placeholder="Enter Your Email" style="margin-right: 10px;">
+                    <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                        Email not valid *exemple@yyy.zzz
+                    </div>
+                </form>
+
+             </div>   
+                        
+             
+
+             <div class="col-md-6" >
+                <form action="" id="registerPhone">
+
+                <input type="text" class="form-control "    id="phone" placeholder="Enter Your Phone" style="margin-right: 10px;">
+                <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                    Enter valid Phone Number
+                </div>
+               </form>
+
+         </div>  
+
+
+         <div class="col-md-6" >
+            <form action="" id="registerAge">
+
+            <input type="text" class="form-control "    id="age" placeholder="Enter Your Age" style="margin-right: 10px;">
+            <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                Enter valid age
+            </div>
+          </form>
+
+     </div>  
+
+
+     <div class="col-md-6" >
+        <form action="" id="registerPassword">
+
+        <input type="password" class="form-control "   id="password" placeholder="Enter Your Password" style="margin-right: 10px;">
+        <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+            Enter valid password *Minimum eight characters, at least one letter and one number:*
+        </div>
+        
+       </form>
+
+   </div>  
+
+
+    <div class="col-md-6" >
+
+        <form action="" id="registerRepassword">
+
+      <input type="password" class="form-control "    id="repassword" placeholder="Enter Your Password" style="margin-right: 10px;">
+      <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">
+        Enter valid repassword 
+    </div>
+      </form>
+
+    </div>  
+                    
+    <button type="submit" disabled class="btn btn-danger" id="submit">Submit</button>
+
+                
+              
+            </div>
+    
+        </div>
+
+       
+    </div>
+
+    
+    
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
